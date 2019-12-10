@@ -1,1 +1,1 @@
-import Hello from './hello.js'
+import Hello from './hello.jsx'
