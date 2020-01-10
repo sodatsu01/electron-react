@@ -5,9 +5,12 @@ export default class Hello extends React.Component {
   render() {
     return(
       <div>
-        <h1>
-          test
+        <h1 className='hello text'>
+          hello
         </h1>
+        <h2 className='text'>
+          test
+        </h2>
       </div>
     )
   }

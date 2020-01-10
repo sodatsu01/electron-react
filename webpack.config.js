@@ -4,11 +4,12 @@ module.exports = {
   output: {
     path: `${__dirname}/out`,
     filename: 'index.js',
+    publicPath: 'http://localhost:8080/out/',
   },
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.js|\.jsx$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
@@ -17,6 +18,10 @@ module.exports = {
             "@babel/react"
           ]
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
       }
     ]
   }
